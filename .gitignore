@@ -3,6 +3,7 @@
 # dependencies
 node_modules/
 .pnp
+media/
 .pnp.js
 
 # testing
