@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redefinição de Senha - RANKD</title>
+<style>
+    body {
+        background-color: #0b0c10;
+        color: #ffffff;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #1f2833;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .header {
+        background: linear-gradient(135deg, #2196F3, #1976D2);
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .content {
+        padding: 30px;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+    .content p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+    .content strong {
+        color: #ffffff;
+    }
+    .content span {
+        color: #ffffff;
+    }
+    .game-name {
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #2196F3, #1976D2);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    }
+    .btn:hover {
+        background: linear-gradient(135deg, #1976D2, #1565C0);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+        color: #ffffff !important;
+    }
+    .btn-container {
+        text-align: center;
+        margin: 30px 0;
+        color: #ffffff;
+    }
+    .btn-container a {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+    .warning {
+        background-color: #2a3441;
+        border-left: 4px solid #ff9800;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+        color: #ffffff;
+    }
+    .warning p {
+        color: #ffffff;
+    }
+    .warning ul {
+        color: #ffffff;
+    }
+    .warning li {
+        color: #ffffff;
+    }
+    .footer {
+        text-align: center;
+        padding: 25px 20px;
+        font-size: 12px;
+        color: #ffffff;
+        background-color: #1a1f29;
+        border-top: 1px solid #2a3441;
+    }
+    .highlight {
+        color: #ffffff;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div style="font-size: 48px; font-weight: bold; color: #ffffff; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+            RANKD
+        </div>
+        <div>Redefinição de Senha</div>
+        <div style="font-size: 16px; font-weight: normal; margin-top: 10px; opacity: 0.9;">
+            Sua plataforma de ranking gaming
+        </div>
+    </div>
+    <div class="content">
+        <p>Olá <strong class="highlight">{{ user_name }}</strong>,</p>
+        
+        <p>Você solicitou uma redefinição de senha para sua conta do <span class="game-name">RANKD</span>.</p>
+        
+        <p>Para prosseguir com a redefinição, clique no botão abaixo:</p>
+        
+        <div class="btn-container">
+            <a href="{{ reset_url }}" class="btn">🔒 Redefinir Minha Senha</a>
+        </div>
+        
+        <div class="warning">
+            <p style="margin: 0;"><strong>⚠️ Importante:</strong></p>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li>Este link expira em <strong class="highlight">1 hora</strong></li>
+                <li>Por segurança, você será redirecionado para uma página segura</li>
+                <li>Após redefinir, faça login com sua nova senha</li>
+            </ul>
+        </div>
+        
+        <p>Se você não solicitou esta redefinição, pode ignorar este e-mail com segurança. Sua conta permanecerá protegida.</p>
+        
+        <p style="font-size: 14px; color: #ffffff;">
+            <strong>Dica de segurança:</strong> Sempre verifique se a URL começa com 
+            <code style="background: #2a3441; padding: 2px 6px; border-radius: 4px; color: #ffffff;">localhost:8000</code>
+            antes de inserir suas informações.
+        </p>
+    </div>
+    <div class="footer">
+        <div style="font-size: 24px; font-weight: bold; color: #ffffff; margin-bottom: 15px;">
+            RANKD
+        </div>
+        <strong>Equipe RANKD</strong><br>
+        Sua plataforma de ranking gaming<br>
+        &copy; 2025 RANKD. Todos os direitos reservados.
+        <br><br>
+        <small style="opacity: 0.9; color: #ffffff;">
+            Este é um e-mail automático, não responda a esta mensagem.
+        </small>
+    </div>
+</div>
+</body>
+</html>

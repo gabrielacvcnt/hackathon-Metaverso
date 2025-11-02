@@ -1,0 +1,46 @@
+services:
+  back:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend:/app
+    env_file:
+      - ./Backend/.env
+    networks:
+      - rankd-network
+    depends_on:
+      - db
+
+  front:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - rankd-network
+    depends_on:
+      - back
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: rankd_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - rankd-network
+
+networks:
+  rankd-network:
+    driver: bridge
+
+volumes:
+  db-data:

@@ -17,17 +17,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from django.conf import settings
+from django.conf.urls.static import static
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from rest_framework_simplejwt.views import (
+    TokenRefreshView,
+)
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="My API",
+      title="RANKD API",
       default_version='v1',
-      description="Test description",
+      description="API para plataforma de ranking gaming",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@myapi.local"),
-      license=openapi.License(name="BSD License"),
+      contact=openapi.Contact(email="rankdxp@gmail.com"),
+      license=openapi.License(name="MIT License"),
    ),
    public=True,
 )
@@ -35,5 +40,11 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
+    path('user/', include('user.url')),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
