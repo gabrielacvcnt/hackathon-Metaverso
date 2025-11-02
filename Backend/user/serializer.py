@@ -114,7 +114,6 @@ class PasswordResetRequestSerializer(serializers.Serializer):
         return value
 
 class PasswordResetConfirmSerializer(serializers.Serializer):
-    token = serializers.CharField()
     new_password = serializers.CharField(
         min_length=8,
         style={'input_type': 'password'}

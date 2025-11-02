@@ -184,4 +184,4 @@ EMAIL_HOST_PASSWORD = 'ydbz voqn qage idgl'
 DEFAULT_FROM_EMAIL = 'RANKD <rankdxp@gmail.com>'
 
 # Frontend URL for password reset links
-FRONTEND_URL = 'http://localhost:8080'
+FRONTEND_URL = config('FRONTEND_BASE_URL')

@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.hashers import make_password
+from django.utils import timezone
 import uuid
 import os
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 def user_profile_path(instance, filename):
     """
@@ -31,14 +32,14 @@ class User(AbstractUser):
 
     def create_reset_password_token(self):
         self.reset_password_token = str(uuid.uuid4())
-        self.reset_password_expires = datetime.now() + timedelta(hours=1)
+        self.reset_password_expires = timezone.now() + timedelta(hours=1)
         self.save()
         return self.reset_password_token
 
     def is_reset_token_valid(self, token):
         return (self.reset_password_token == token and 
                 self.reset_password_expires and 
-                datetime.now() < self.reset_password_expires)
+                timezone.now() < self.reset_password_expires)
 
     def reset_password(self, new_password):
         self.password = make_password(new_password)

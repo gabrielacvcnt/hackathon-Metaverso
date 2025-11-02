@@ -176,7 +176,7 @@ class PasswordResetRequestView(generics.GenericAPIView):
         token = user.create_reset_password_token()
         
         try:
-            reset_url = f"http://localhost:8000/reset-password/{token}"
+            reset_url = f"{settings.FRONTEND_URL}password-reset/confirm/{token}"
             
             html_content = render_to_string('e-mail.html', {
                 'user_name': user.name,
@@ -221,11 +221,10 @@ class PasswordResetConfirmView(generics.GenericAPIView):
     serializer_class = PasswordResetConfirmSerializer
     permission_classes = [AllowAny]
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, token, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         
-        token = serializer.validated_data['token']
         new_password = serializer.validated_data['new_password']
         
         try:

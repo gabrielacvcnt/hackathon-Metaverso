@@ -18,5 +18,5 @@ urlpatterns = [
     path('toggle-dark-mode/', ToggleDarkModeView.as_view(), name='toggle-dark-mode'),
     path('login/', LoginView.as_view(), name='login'),
     path('password-reset/', PasswordResetRequestView.as_view(), name='password-reset-request'),
-    path('password-reset/confirm/', PasswordResetConfirmView.as_view(), name='password-reset-confirm'),
+    path('password-reset/confirm/<str:token>/', PasswordResetConfirmView.as_view(), name='password-reset-confirm'),
 ]
