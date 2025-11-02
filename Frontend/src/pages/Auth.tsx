@@ -117,9 +117,6 @@ export default function Auth() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="mb-6 lg:mb-8 text-center">
-          <div className="inline-flex h-12 w-12 lg:h-16 lg:w-16 items-center justify-center rounded-xl bg-primary text-primary-foreground mb-3 lg:mb-4">
-            <span className="text-lg lg:text-2xl font-bold">RANKD</span>
-          </div>
         </div>
 
         <Tabs defaultValue="signup" className="w-full">

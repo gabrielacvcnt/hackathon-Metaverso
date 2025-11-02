@@ -101,9 +101,6 @@ const PasswordResetConfirm = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 via-background to-secondary/20 p-4">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-4 text-center">
-            <div className="flex justify-center">
-              <div className="text-2xl font-bold text-primary">RANKD</div>
-            </div>
             <div>
               <CardTitle className="text-2xl font-bold text-green-600">
                 <CheckCircle className="w-8 h-8 mx-auto mb-2" />
@@ -138,9 +135,6 @@ const PasswordResetConfirm = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 via-background to-secondary/20 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-4 text-center">
-          <div className="flex justify-center">
-            <div className="text-2xl font-bold text-primary">RANKD</div>
-          </div>
           <div>
             <CardTitle className="text-2xl font-bold">Nova Senha</CardTitle>
             <CardDescription>

@@ -112,7 +112,7 @@ const Profile = () => {
   const activities = [
     { title: "Reached Level 24", time: "2 days ago", icon: TrendingUp },
     { title: "Earned Farm Master badge", time: "1 week ago", icon: Trophy },
-    { title: "Joined LSX Platform", time: "1 month ago", icon: CheckCircle2 },
+    { title: "Joined Rankd Platform", time: "1 month ago", icon: CheckCircle2 },
   ];
 
   const weeklyGoals = [
