@@ -164,3 +164,90 @@ All colors MUST be HSL.
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* -------------------------------------- */
+/* 1. VARIÁVEIS CSS (Melhor Prática)      */
+/* -------------------------------------- */
+:root {
+    /* Cores Padrão (Light Mode) */
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --header-bg: #ffffff;
+    --toggle-bg: #1c94f4;
+}
+
+.dark-mode {
+    /* Cores para Dark Mode (Sobrescrevem as Padrão) */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --toggle-bg: #6366f1; /* Cor roxa, por exemplo */
+}
+
+/* -------------------------------------- */
+/* 2. ESTILOS GERAIS                      */
+/* -------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+main {
+    padding: 20px;
+}
+
+/* -------------------------------------- */
+/* 3. ESTILO DO BOTÃO TOGGLE (Slider)     */
+/* -------------------------------------- */
+
+.checkbox {
+    opacity: 0; /* Esconde o checkbox real */
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.fa-moon { color: #f1c40f; } /* Cor amarela para a lua */
+.fa-sun { color: #f39c12; }  /* Cor laranja para o sol */
+
+.ball {
+    background-color: var(--toggle-bg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    transition: transform 0.2s linear, background-color 0.3s;
+}
+
+/* Move a 'bola' para a direita quando o checkbox está marcado (Dark Mode) */
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+    /* No Dark Mode, o 'ball' fica com a cor --toggle-bg (roxa) */
+}
