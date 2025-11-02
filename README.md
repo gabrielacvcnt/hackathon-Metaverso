@@ -1,18 +1,60 @@
-# RANKD - Gaming Analytics Platform
+# 🎮 Rankd — Além da Partida
 
-Sistema de analytics para jogos conectado com API Django e frontend React/TypeScript.
+> **Dados que você entende. Evolução que você vê.**
 
-## 🚀 Tecnologias
+Rankd é uma plataforma que democratiza a análise de performance gamer.  
+Nosso objetivo é transformar estatísticas de jogos em **insights claros, visuais e acionáveis**, ajudando qualquer jogador a evoluir — mesmo sem patrocínio, equipe ou softwares caros.
 
-### Backend
-- Django 5.2.7
-- Django REST Framework
-- JWT Authentication
-- SQLite (desenvolvimento)
-- PostgreSQL (produção via Docker)
-- CORS habilitado
+---
 
-### Frontend
+## 🧩 Contexto
+
+O universo dos e-sports cresce exponencialmente, mas o acesso a ferramentas de análise ainda é limitado.  
+Enquanto times profissionais contam com estruturas completas, **jogadores independentes** precisam lidar com dados brutos e interfaces complexas.
+
+A Rankd surge para **democratizar o acesso à análise de performance gamer**, tornando os dados **inteligíveis, acessíveis e motivadores**.
+
+> 🎯 “Os dados estão disponíveis — o problema é que ninguém os entende.”
+
+---
+
+## 💡 O Problema
+
+- 💰 Ferramentas de análise são caras e voltadas a times profissionais.  
+- 📊 Interfaces priorizam volume de dados, não clareza.  
+- 🎮 Jogadores amadores e streamers não têm acesso a relatórios acessíveis.  
+- 🤯 Falta de feedback claro sobre desempenho individual.
+
+---
+
+## 🚀 Nossa Solução
+
+**Rankd: seu espelho de performance.**
+
+Uma plataforma acessível que transforma estatísticas de jogo em **comparativos visuais e diagnósticos automáticos**.  
+O jogador conecta sua conta, e o sistema gera insights práticos sobre seus padrões e oportunidades de melhoria.
+
+Exemplos:
+- 🧩 “Você acerta 18% mais jogando à direita do mapa.”  
+- ⏰ “Seu desempenho é 12% melhor entre 20h e 22h.”  
+- 🔥 “Você está 30% mais consistente que na semana passada!”
+
+---
+
+## 🧠 Principais Funcionalidades
+
+| Funcionalidade | Descrição |
+|----------------|------------|
+| 📊 **Dashboard Inteligente** | Visual limpo, métricas relevantes e comparativos automáticos. |
+| ⚡ **Insights Automatizados** | Feedbacks simples baseados em regras de comparação (IF/ELSE). |
+| 🎮 **Integração com APIs Públicas** | Riot API, OpenDota API, entre outras. |
+| 💬 **Feedback Personalizado** | Recomendações para evoluir com base no próprio padrão de jogo. |
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+**Frontend**
 - React 18
 - TypeScript
 - Vite
@@ -20,11 +62,98 @@ Sistema de analytics para jogos conectado com API Django e frontend React/TypeSc
 - shadcn/ui
 - React Router DOM
 
-## 📋 Pré-requisitos
+**Backend**
+- Django 5.2.7
+- Django REST Framework
+- JWT Authentication
+- SQLite (desenvolvimento)
+- PostgreSQL (produção via Docker)
+- CORS habilitado
+
+**APIs e Integrações**
+- Riot API  
+- OpenDota API  
+
+**📋 Pré-requisitos**
 
 - Python 3.8+
 - Node.js 16+
 - npm ou bun
+
+---
+
+## 🎯 Público-Alvo
+
+**“O Competitivo Amador”**
+
+- Idade: 16 a 30 anos  
+- Perfil: estudantes, criadores de conteúdo pequenos, atletas universitários e participantes de campeonatos online  
+- Recursos limitados, alto engajamento  
+- Desejo forte de melhorar e ser notado  
+
+> “Eu jogo, mas não consigo enxergar meus padrões e pontos de melhoria sozinho.”
+
+---
+
+## 💰 Modelo de Negócio
+
+**Freemium**  
+- Base gratuita para atrair a massa de jogadores.  
+- Plano pago (futuro, em reais): histórico de +3 meses, comparativos com a média do elo, planejador de treinos.
+
+**Baixíssimo custo operacional:**  
+Sem IA complexa — apenas regras e lógica aplicada a dados públicos.
+
+---
+
+## 💥 Impacto
+
+| Dimensão | Impacto |
+|-----------|----------|
+| 🌍 Social | Democratiza acesso a dados antes restritos à elite do e-sport. |
+| 🎓 Educacional | Ensina jogadores a interpretar métricas e padrões. |
+| 💼 Econômico | Abre oportunidades de crescimento e visibilidade. |
+| 🤝 Comunitário | Fomenta uma cultura de melhoria e aprendizado dentro dos games. |
+
+---
+
+## ✨ Diferenciais
+
+| Soluções Atuais | **Rankd (Sem IA)** |
+|-----------------|---------------------|
+| Dados brutos e complexos | Comparativos visuais e claros |
+| Linguagem técnica | Linguagem de jogador |
+| Preços em dólar | Freemium e acessível em reais |
+| Foco em times e analistas | Foco no jogador individual |
+| Tentam prever o futuro | Ajudamos a entender o presente |
+
+> “Queremos oferecer o que um time profissional tem — mas de forma simples e acessível.”
+
+---
+
+## 🧑‍💻 Equipe
+
+| Nome | Função |
+|------|---------|
+| **Gabriela Cavalcante** | Product Owner / UX-UI |
+| **Thiago Victor** | Desenvolvedor |
+| **João Felipe** | Desenvolvedor |
+| **Márcio Souto** | Desenvolvedor |
+| **Fábio Hiranoyama** | Desenvolvedor |
+
+> 💬 “Conectamos propósito e tecnologia para transformar o universo gamer.”
+
+---
+
+## 🏁 Conclusão
+
+**Além da Partida**, a Rankd representa o autoconhecimento e o desenvolvimento pessoal no universo gamer.  
+Ela transforma dados em **evolução**, promovendo uma nova cultura de aprendizado e prática consciente.
+
+🎥 **Assista ao vídeo demonstrativo:**  
+👉 [Link para o vídeo ou protótipo funcional](https://link-aqui.com)
+
+---
 
 ## 🛠️ Configuração do Projeto
 
